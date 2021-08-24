@@ -21,5 +21,10 @@ class UserController extends Controller
     return "Record has been created success";
 
     }
+    public function fetchPhoneByUser($id)
+    {
+        $phone = User::find($id)->phone;
+        return $phone;
+    }
 
 }

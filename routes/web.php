@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/add-user',[UserController::class,'insertRecord']);
+
+Route::get('get-phone/{id}',[UserController::class,'fetchPhoneByUser']);
