@@ -32,3 +32,5 @@ Route::get('add-comment/{id}',[PostController::class,'addComment']);
 Route::get('/get-comments/{id}',[PostController::class,'getCommentsByPost']);
 
 Route::get('/add-roles',[RoleController::class,'addRole']);
+
+Route::get('/add-users',[RoleController::class,'addUser']);
