@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,7 @@ Route::get('/', function () {
 Route::get('/add-user',[UserController::class,'insertRecord']);
 
 Route::get('get-phone/{id}',[UserController::class,'fetchPhoneByUser']);
+
+Route::get('/add-post',[PostController::class,'addPost']);
+
+Route::get('add-comment/{id}',[PostController::class,'addComment']);
