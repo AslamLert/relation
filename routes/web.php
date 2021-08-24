@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +30,5 @@ Route::get('/add-post',[PostController::class,'addPost']);
 Route::get('add-comment/{id}',[PostController::class,'addComment']);
 
 Route::get('/get-comments/{id}',[PostController::class,'getCommentsByPost']);
+
+Route::get('/add-roles',[RoleController::class,'addRole']);
