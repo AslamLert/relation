@@ -26,3 +26,5 @@ Route::get('get-phone/{id}',[UserController::class,'fetchPhoneByUser']);
 Route::get('/add-post',[PostController::class,'addPost']);
 
 Route::get('add-comment/{id}',[PostController::class,'addComment']);
+
+Route::get('/get-comments/{id}',[PostController::class,'getCommentsByPost']);

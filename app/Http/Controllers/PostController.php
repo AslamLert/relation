@@ -24,4 +24,9 @@ class PostController extends Controller
         $post->comments()->save($comment);
         return "Comment has been posted";
     }
+    public function getCommentsByPost($id)
+    {
+        $comments = Post::find($id)->comments;
+        return $comments;
+    }
 }
