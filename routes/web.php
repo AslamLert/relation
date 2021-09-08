@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FrontpageController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -38,3 +40,6 @@ Route::get('/add-users',[RoleController::class,'addUser']);
 Route::get('/rolesbyuser/{id}',[RoleController::class,'getAllRolesByUser']);
 
 Route::get('/usersbyrole/{id}',[RoleController::class,'getAllUsersByRole']);
+
+Route::get('/home',[FrontpageController::class,'home']);
+Route::post('/orders', [OrderController::class, 'store']);
